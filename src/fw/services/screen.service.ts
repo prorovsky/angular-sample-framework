@@ -22,7 +22,7 @@ export class ScreenService {
     }
 
     isLarge(): boolean {
-        return false;
+        return this.screenWidth >= this.largeBreakpoint;
     }
 
     onResize($event): void {
