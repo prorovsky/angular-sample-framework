@@ -13,6 +13,7 @@ import { appRoutes } from './app.routing';
 import { FilmDetailComponent } from './film-detail/film-detail.component';
 import { FilmListComponent } from './film-list/film-list.component';
 import { FilmMaintComponent } from './film-maint/film-maint.component';
+import { AuthenticatedUserComponent } from './authenticated-user/authenticated-user.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FilmMaintComponent } from './film-maint/film-maint.component';
     SettingsComponent,
     FilmDetailComponent,
     FilmListComponent,
-    FilmMaintComponent
+    FilmMaintComponent,
+    AuthenticatedUserComponent
   ],
   imports: [
     BrowserModule,
