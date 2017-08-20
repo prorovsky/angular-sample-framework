@@ -5,6 +5,7 @@ import { FilmListComponent } from './film-list/film-list.component';
 import { FilmDetailComponent } from './film-detail/film-detail.component';
 import { FilmMaintComponent } from './film-maint/film-maint.component';
 import { AuthenticatedUserComponent } from './authenticated-user/authenticated-user.component';
+import { SignInComponent } from '../fw/users/sign-in/sign-in.component';
 
 export const appRoutes: Routes = [
     { path: 'signin', component: SignInComponent },
