@@ -6,9 +6,11 @@ import { FilmDetailComponent } from './film-detail/film-detail.component';
 import { FilmMaintComponent } from './film-maint/film-maint.component';
 import { AuthenticatedUserComponent } from './authenticated-user/authenticated-user.component';
 import { SignInComponent } from '../fw/users/sign-in/sign-in.component';
+import { RegisterUserComponent } from '../fw/users/register-user/register-user.component';
 
 export const appRoutes: Routes = [
     { path: 'signin', component: SignInComponent },
+    { path: 'register', component: RegisterUserComponent },
     { path: 'authenticated', component: AuthenticatedUserComponent,
         children: [
             { path: 'dashboard', component: DashboardComponent },
