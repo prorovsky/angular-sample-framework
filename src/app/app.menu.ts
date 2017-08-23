@@ -4,7 +4,7 @@ export let initialMenuItems: Array<MenuItem> = [
     {
         text: 'Dashboard',
         icon: 'glyphicon-dashboard',
-        route: 'dashboard',
+        route: '/authenticated/dashboard',
         submenu: null
     },
     {
@@ -20,19 +20,19 @@ export let initialMenuItems: Array<MenuItem> = [
                     {
                         text: 'Matrix',
                         icon: 'glyphicon-film',
-                        route: 'film-detail/Matrix',
+                        route: '/authenticated/film-detail/Matrix',
                         submenu: null
                     },
                     {
                         text: 'Terminator',
                         icon: 'glyphicon-film',
-                        route: 'film-detail/Terminator',
+                        route: '/authenticated/film-detail/Terminator',
                         submenu: null
                     },
                     {
                         text: 'Robocop',
                         icon: 'glyphicon-film',
-                        route: 'film-detail/Robocop',
+                        route: '/authenticated/film-detail/Robocop',
                         submenu: null
                     }
                 ]
@@ -40,19 +40,19 @@ export let initialMenuItems: Array<MenuItem> = [
             {
                 text: 'Top 3',
                 icon: 'glyphicon-film',
-                route: 'film-list/3',
+                route: '/authenticated/film-list/3',
                 submenu: null
             },
             {
                 text: 'Top 10',
                 icon: 'glyphicon-film',
-                route: 'film-list/10',
+                route: '/authenticated/film-list/10',
                 submenu: null
             },
             {
                 text: 'All',
                 icon: 'glyphicon-film',
-                route: 'film-list/0',
+                route: '/authenticated/film-list/0',
                 submenu: null
             }
         ]
@@ -65,13 +65,13 @@ export let initialMenuItems: Array<MenuItem> = [
             {
                 text: 'Film List',
                 icon: 'glyphicon-th-list',
-                route: 'film-maint',
-                submenu: null   
+                route: '/authenticated/film-maint',
+                submenu: null
             },
             {
                 text: 'Settings',
                 icon: 'glyphicon-cog',
-                route: 'settings',
+                route: '/authenticated/settings',
                 submenu: null
             }
         ]
