@@ -1,3 +1,39 @@
-<p>
-  film-maint works!
-</p>
+<h3>Film Maintenance</h3>
+<button class="btn btn-primary" (click)="createFilm()">Add new Film</button>
+<table>
+    <thead>
+        <tr>
+            <th style="width: 25px">Id</th>
+            <th style="width: 200px">Film</th>
+            <th style="width: 70px">IMDB Rating</th>
+            <th style="min-width: 100px"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let film of films">
+            <td>{{film.id}}</td>
+            <td>{{film.name}}</td>
+            <td>{{film.imdbRating}}</td>
+            <td *ngIf="film.id != deleteId">
+                <button class="btn btn-sm btn-primary"
+                (click)="showFilmDetail(film.id)">
+                    Details
+                </button>
+                <button class="btn btn-sm btn-warning"
+                (click)="editFilm(film.id)">
+                    Edit
+                </button>
+                <button class="btn btn-sm btn-danger"
+                (click)="deleteFilmQuestion(film.id)">
+                    Delete
+                </button>
+            </td>
+            <td *ngIf="film.id === deleteId && !isDeleting">
+                Delete this film?
+                <button class="btn btn-sm" (click)="cancelDelete()">Cancel</button>
+                <button class="btn btn-sm btn-danger" (click)="deleteFilm(film.id)">Delete</button>
+                <p *ngIf="deleteError">{{deleteError}}</p>
+            <td *ngIf="film.id === deleteId && isDeleting">Deleting...</td>
+        </tr>
+    </tbody>
+</table>
