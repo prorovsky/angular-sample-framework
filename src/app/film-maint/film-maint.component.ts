@@ -31,4 +31,28 @@ export class FilmMaintComponent implements OnInit {
         this.deleteId = null;
     }
 
+    createFilm() {
+        this.router.navigate(['/authenticated/film-detail', 0, 'create']);
+    }
+
+    deleteFilm(id: number) {
+        this.isDeleting = true;
+        this.dataService.deleteFilm(id).subscribe(
+            c => this.cancelDelete(),
+            err => { this.deleteError = err; this.isDeleting = false; }
+        );
+    }
+
+    deleteFilmQuestion(id: number) {
+        this.deleteError = null;
+        this.deleteId = id;
+    }
+
+    editFilm(id: number) {
+        this.router.navigate(['/authenticated/film-detail', id, 'edit']);
+    }
+
+    showFilmDetail(id: number) {
+        this.router.navigate(['/authenticated/film-detail', id, 'details']);
+    }
 }

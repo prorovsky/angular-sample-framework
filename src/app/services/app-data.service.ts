@@ -50,7 +50,7 @@ export class AppDataService {
         return Observable.of(film);
     }
 
-    updateCountry(updatedFilm: Film): Observable<any> {
+    updateFilm(updatedFilm: Film): Observable<any> {
         const film = this.films.find(f => f.id == updatedFilm.id);
         Object.assign(film, updatedFilm);
         return Observable.of(film).delay(2000);
