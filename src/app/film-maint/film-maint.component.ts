@@ -38,7 +38,7 @@ export class FilmMaintComponent implements OnInit {
     deleteFilm(id: number) {
         this.isDeleting = true;
         this.dataService.deleteFilm(id).subscribe(
-            c => this.cancelDelete(),
+            f => this.cancelDelete(),
             err => { this.deleteError = err; this.isDeleting = false; }
         );
     }

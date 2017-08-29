@@ -19,7 +19,7 @@ export const appRoutes: Routes = [
                 { path: '', redirectTo: 'dashboard', pathMatch: 'full'},
                 { path: 'dashboard', component: DashboardComponent },
                 { path: 'film-list/:count', component: FilmListComponent },
-                { path: 'film-detail/:film/:operation', component: FilmDetailComponent },
+                { path: 'film-detail/:id/:operation', component: FilmDetailComponent },
                 { path: 'film-maint', component: FilmMaintComponent },
                 { path: 'settings', component: SettingsComponent },
             ] }

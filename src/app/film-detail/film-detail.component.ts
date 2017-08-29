@@ -28,11 +28,18 @@ export class FilmDetailComponent implements OnInit {
             required: true
         },
         {
-            key: 'ImdbRating',
+            key: 'imdbRating',
             type: 'number',
             isId: false,
             label: 'IMDB Rating',
             required: true
+        },
+        {
+            key: 'poster',
+            type: 'image',
+            isId: false,
+            label: 'Poster',
+            required: false
         }
     ];
     errorMessage: string;
@@ -46,13 +53,15 @@ export class FilmDetailComponent implements OnInit {
 
     ngOnInit() {
         this.operation = this.route.snapshot.params['operation'];
-
         if (this.operation === 'create') {
             this.film = { id: 0, name: "", imdbRating: null };
         }
         else {
-            this.dataService.getFilm(this.route.snapshot.params['id'])
-                .subscribe((film: Film) => this.film = film);
+            const filmId = this.route.snapshot.params['id'];
+            this.dataService.getFilm(filmId)
+                .subscribe((film: Film) => {
+                    this.film = film;
+                });
         }
     }
 
