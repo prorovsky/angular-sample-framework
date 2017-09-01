@@ -18,6 +18,8 @@ import { UserService } from './services/user.service';
 import { UserApi } from '../fw/users/user-api';
 import { AuthGuard } from './services/auth-guard.service';
 import { AppDataService } from './services/app-data.service';
+import { FilmPanelComponent } from './panels/film-panel/film-panel.component';
+import { ImagePanelComponent } from './panels/image-panel/image-panel.component';
 
 @NgModule({
     declarations: [
@@ -27,7 +29,9 @@ import { AppDataService } from './services/app-data.service';
         FilmDetailComponent,
         FilmListComponent,
         FilmMaintComponent,
-        AuthenticatedUserComponent
+        AuthenticatedUserComponent,
+        FilmPanelComponent,
+        ImagePanelComponent
     ],
     imports: [
         BrowserModule,

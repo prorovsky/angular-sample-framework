@@ -30,7 +30,7 @@
             </td>
             <td *ngIf="film.id === deleteId && !isDeleting">
                 Delete this film?
-                <button class="btn btn-sm" (click)="cancelDelete()">Cancel</button>
+                <button class="btn btn-sm btn-info" (click)="cancelDelete()">Cancel</button>
                 <button class="btn btn-sm btn-danger" (click)="deleteFilm(film.id)">Delete</button>
                 <p *ngIf="deleteError">{{deleteError}}</p>
             <td *ngIf="film.id === deleteId && isDeleting">Deleting...</td>

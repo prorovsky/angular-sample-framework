@@ -20,19 +20,7 @@ export let initialMenuItems: Array<MenuItem> = [
                     {
                         text: 'Matrix',
                         icon: 'glyphicon-film',
-                        route: '/authenticated/film-detail/Matrix',
-                        submenu: null
-                    },
-                    {
-                        text: 'Terminator',
-                        icon: 'glyphicon-film',
-                        route: '/authenticated/film-detail/Terminator',
-                        submenu: null
-                    },
-                    {
-                        text: 'Robocop',
-                        icon: 'glyphicon-film',
-                        route: '/authenticated/film-detail/Robocop',
+                        route: '/authenticated/film-detail/4/details',
                         submenu: null
                     }
                 ]
@@ -44,9 +32,9 @@ export let initialMenuItems: Array<MenuItem> = [
                 submenu: null
             },
             {
-                text: 'Top 10',
+                text: 'Top 5',
                 icon: 'glyphicon-film',
-                route: '/authenticated/film-list/10',
+                route: '/authenticated/film-list/5',
                 submenu: null
             },
             {

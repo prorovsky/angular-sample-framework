@@ -8,16 +8,16 @@ import { Observable } from 'rxjs/Observable';
 export class AppDataService {
 
     private films: Array<Film> = [
-        { id: 1, name: 'The Matrix', imdbRating: 8.7, poster: './assets/matrix-poster.jpg' },
-        { id: 2, name: 'The Terminator', imdbRating: 8.0 },
-        { id: 3, name: 'RoboCop', imdbRating: 7.5 },
-        { id: 4, name: 'Dogville', imdbRating: 8.0 },
-        { id: 5, name: 'Antichrist', imdbRating: 6.6 },
-        { id: 6, name: 'The Godfather', imdbRating: 9.2 },
-        { id: 7, name: 'Pulp Fiction', imdbRating: 8.9 },
-        { id: 8, name: 'Fight Club', imdbRating: 8.8 },
-        { id: 9, name: 'Inception', imdbRating: 8.7 },
-        { id: 10, name: 'Interstellar', imdbRating: 8.5 },
+        { id: 1, name: 'The Godfather', imdbRating: 9.2 },
+        { id: 2, name: 'Pulp Fiction', imdbRating: 8.9 },
+        { id: 3, name: 'Fight Club', imdbRating: 8.8 },
+        { id: 4, name: 'The Matrix', imdbRating: 8.7, poster: './assets/matrix-poster.jpg' },
+        { id: 5, name: 'Inception', imdbRating: 8.7 },
+        { id: 6, name: 'Interstellar', imdbRating: 8.5 },
+        { id: 7, name: 'Dogville', imdbRating: 8.0 },
+        { id: 8, name: 'The Terminator', imdbRating: 8.0 },
+        { id: 9, name: 'RoboCop', imdbRating: 7.5 },
+        { id: 10, name: 'Antichrist', imdbRating: 6.6 }
     ]
 
     constructor(private userService: UserService) {
